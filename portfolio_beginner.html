@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Диас Самалхан - Портфолио</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <style>
+
+    body {
+      background-color: #1a1a2e;
+      color: white;
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #16213e;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: #00d4ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    #hero {
+      padding: 80px 20px 60px 20px;
+      background: linear-gradient(180deg, #1a1a2e, #16213e);
+    }
+
+    #hero h1 {
+      font-size: 52px;
+      color: #00d4ff;
+      margin-bottom: 10px;
+    }
+
+    #hero p {
+      font-size: 18px;
+      color: #aaaaaa;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 28px;
+      background-color: #0f3460;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 15px;
+      border: 2px solid #00d4ff;
+    }
+
+    .btn:hover {
+      background-color: #00d4ff;
+      color: #1a1a2e;
+    }
+
+    section {
+      padding: 50px 20px;
+    }
+
+    section h2 {
+      font-size: 32px;
+      color: #00d4ff;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #00d4ff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    #about {
+      background-color: #16213e;
+    }
+
+    #about p {
+      max-width: 700px;
+      margin: 0 auto 15px auto;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #cccccc;
+      text-align: left;
+    }
+
+    .stats-table {
+      margin: 30px auto;
+      border-collapse: collapse;
+    }
+
+    .stats-table td {
+      border: 1px solid #00d4ff;
+      padding: 12px 25px;
+      text-align: center;
+    }
+
+    .stats-table td span {
+      display: block;
+      font-size: 28px;
+      font-weight: bold;
+      color: #00d4ff;
+    }
+
+    .stats-table td small {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    .hobbies-wrap {
+      margin-top: 30px;
+    }
+
+    .hobbies-wrap h3 {
+      color: #00d4ff;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .hobby-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hobby-card {
+      background: #0f3460;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 20px;
+      width: 160px;
+    }
+
+    .hobby-card:hover {
+      border-color: #00d4ff;
+    }
+
+    .hobby-card .icon { font-size: 32px; }
+    .hobby-card .name { font-weight: bold; margin: 8px 0 4px; font-size: 14px; }
+    .hobby-card .desc { font-size: 12px; color: #aaa; }
+
+    #skills {
+      background-color: #1a1a2e;
+    }
+
+    .skill-list {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .skill-item-row {
+      margin-bottom: 18px;
+    }
+
+    .skill-item-row label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    .skill-item-row label span {
+      float: right;
+      color: #00d4ff;
+    }
+
+    .bar-bg {
+      background-color: #333;
+      border-radius: 5px;
+      height: 12px;
+      width: 100%;
+    }
+
+    .bar-fill {
+      height: 12px;
+      border-radius: 5px;
+      background-color: #00d4ff;
+    }
+
+    #projects {
+      background-color: #16213e;
+    }
+
+    .projects-wrap {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background: #0f3460;
+      border: 1px solid #444;
+      border-radius: 8px;
+      padding: 25px;
+      width: 280px;
+      text-align: left;
+    }
+
+    .project-card:hover {
+      border-color: #00d4ff;
+      box-shadow: 0 0 10px rgba(0,212,255,0.3);
+    }
+
+    .project-card h3 { color: #00d4ff; margin-top: 0; font-size: 18px; }
+    .project-card p { font-size: 14px; color: #aaa; line-height: 1.6; }
+
+    .tag {
+      display: inline-block;
+      background: #1a1a2e;
+      color: #00d4ff;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin: 2px;
+      border: 1px solid #00d4ff;
+    }
+
+    #contact {
+      background-color: #1a1a2e;
+    }
+
+    #contact p { color: #aaa; margin-bottom: 20px; }
+
+    .contact-btns a {
+      display: inline-block;
+      margin: 8px;
+      padding: 10px 20px;
+      border: 1px solid #00d4ff;
+      color: #00d4ff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .contact-btns a:hover {
+      background: #00d4ff;
+      color: #1a1a2e;
+    }
+
+    footer {
+      background: #0f3460;
+      padding: 20px;
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    footer span { color: red; }
+
+    marquee {
+      background: #0f3460;
+      padding: 8px 0;
+      color: #00d4ff;
+      font-size: 14px;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">Обо мне</a>
+    <a href="#skills">Навыки</a>
+    <a href="#projects">Проекты</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+
+  <marquee>🚀 Добро пожаловать на мой сайт! &nbsp;&nbsp;&nbsp; Студент-разработчик из Семея &nbsp;&nbsp;&nbsp; Изучаю программирование каждый день! 💻</marquee>
+
+  <section id="hero">
+    <h1>Самалхан Диас</h1>
+    <p>Студент-разработчик &nbsp;·&nbsp; Abai IT College &nbsp;·&nbsp; Семей, Казахстан</p>
+    <br>
+    <a class="btn" href="#projects">Мои проекты</a>
+    <a class="btn" href="#contact">Связаться</a>
+  </section>
+
+  <section id="about">
+    <h2>Обо мне</h2>
+
+    <p>Меня зовут <strong>Самалхан Диас</strong>, мне <strong>17 лет</strong>. Я живу в городе <strong>Семей, Казахстан</strong> и учусь в колледже <strong>Abai IT College</strong> по специальности «<strong>Разработчик программного обеспечения</strong>».</p>
+
+    <p>Сейчас прохожу <strong>производственную практику</strong>, где применяю знания на реальных задачах. Увлечён разработкой, постоянно изучаю новые технологии и стараюсь писать чистый и эффективный код.</p>
+
+    <p>В свободное время увлекаюсь <strong>компьютерными играми</strong>. Также слушаю <strong>музыку</strong> во время кодинга и интересуюсь <strong>кибербезопасностью</strong>.</p>
+
+    <table class="stats-table">
+      <tr>
+        <td><span>17</span><small>Лет</small></td>
+        <td><span>IT</span><small>Колледж Abai</small></td>
+        <td><span>КЗ</span><small>Семей, Казахстан</small></td>
+      </tr>
+    </table>
+
+    <div class="hobbies-wrap">
+      <h3>Интересы и хобби</h3>
+      <div class="hobby-list">
+        <div class="hobby-card">
+          <div class="icon">🎮</div>
+          <div class="name">Геймер</div>
+          <div class="desc">Игры развивают логику и стратегическое мышление.</div>
+        </div>
+        <div class="hobby-card">
+          <div class="icon">🎧</div>
+          <div class="name">Музыка</div>
+          <div class="desc">Кодинг под lo-fi — мой лучший рабочий режим.</div>
+        </div>
+        <div class="hobby-card">
+          <div class="icon">🔐</div>
+          <div class="name">Кибербез.</div>
+          <div class="desc">Хочу углубиться в эту сферу в будущем.</div>
+        </div>
+        <div class="hobby-card">
+          <div class="icon">📚</div>
+          <div class="name">Саморазвитие</div>
+          <div class="desc">Постоянно изучаю что-то новое в IT.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Навыки</h2>
+
+    <div class="skill-list">
+      <div class="skill-item-row">
+        <label>🌐 HTML5 <span>90%</span></label>
+        <div class="bar-bg"><div class="bar-fill" style="width: 90%"></div></div>
+      </div>
+      <div class="skill-item-row">
+        <label>🐍 Python <span>65%</span></label>
+        <div class="bar-bg"><div class="bar-fill" style="width: 65%"></div></div>
+      </div>
+      <div class="skill-item-row">
+        <label>📱 Responsive Design <span>75%</span></label>
+        <div class="bar-bg"><div class="bar-fill" style="width: 75%"></div></div>
+      </div>
+      <div class="skill-item-row">
+        <label>💻 VS Code <span>85%</span></label>
+        <div class="bar-bg"><div class="bar-fill" style="width: 85%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Мои проекты</h2>
+
+    <div class="projects-wrap">
+      <div class="project-card">
+        <span class="tag">Учебный проект</span>
+        <h3>Личный сайт-портфолио</h3>
+        <p>Этот сайт — мой первый полноценный проект. Создал его во время производственной практики в Abai IT College, чтобы представить себя как разработчика.</p>
+        <div>
+          <span class="tag">HTML</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="tag">Практика</span>
+        <h3>Учебные задания</h3>
+        <p>В ходе обучения выполняю задачи по программированию: алгоритмы, работа с базами данных, веб-разработка. Каждый проект — это новый навык.</p>
+        <div>
+          <span class="tag">Python</span>
+          <span class="tag">Алгоритмы</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="tag">В разработке</span>
+        <h3>Скоро...</h3>
+        <p>Я постоянно работаю над новыми проектами. Следите за обновлениями — здесь скоро появятся новые работы!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Контакты</h2>
+    <p>Открыт для общения, сотрудничества и новых возможностей.<br>Если хочешь поговорить о проектах или просто познакомиться — пиши!</p>
+    <div class="contact-btns">
+      <a href="mailto:dias@example.com" onclick="alert('Откройте почту!')">✉ Email</a>
+      <a href="https://github.com/" target="_blank">⌥ GitHub</a>
+      <a href="https://t.me/" target="_blank">✈ Telegram</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Самалхан Диас · Семей, Казахстан · 2025</p>
+  </footer>
+
+  <script>
+    window.onscroll = function() {
+      var sections = document.querySelectorAll('section');
+      var links = document.querySelectorAll('nav a');
+
+      sections.forEach(function(section, i) {
+        var top = section.offsetTop - 70;
+        var bottom = top + section.offsetHeight;
+        if (window.scrollY >= top && window.scrollY < bottom) {
+          links.forEach(function(l) { l.style.color = '#00d4ff'; });
+          if (links[i]) links[i].style.color = 'white';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
